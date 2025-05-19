@@ -1,0 +1,11 @@
+# manifest.yml
+---
+applications:
+- name: dotnetcore-cf-test
+  memory: 256M
+  instances: 1
+  buildpacks:
+  - dotnet_core_buildpack
+  env:
+    DOTNET_CLI_TELEMETRY_OPTOUT: 1
+    DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
